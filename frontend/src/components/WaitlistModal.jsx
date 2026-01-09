@@ -312,9 +312,8 @@ const WaitlistModal = ({ isOpen, onClose, product }) => {
             
             {result?.access_code && (
               <div className="access-code-box">
-                <span className="access-label">Your Access Code</span>
-                <span className="access-code">{result.access_code}</span>
-                <span className="access-note">Save this code for early access checkout</span>
+                <div className="access-label">Your Access Code: <span className="access-code">{result.access_code}</span></div>
+                <div className="access-note">The code will be sent to your email as well!</div>
               </div>
             )}
 
