@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 
 const API_URL = process.env.REACT_APP_BACKEND_URL;
 
-// RAZE Logo URL
-const RAZE_LOGO = 'https://customer-assets.emergentagent.com/job_simple-greeting-395/artifacts/7vw9prpd_blue.png';
+// RAZE Logo URL (New transparent logo)
+const RAZE_LOGO = 'https://customer-assets.emergentagent.com/job_gym-revival/artifacts/4r1r4twt_211221.png';
 
 const GiveawayPopup = () => {
   const { t } = useTranslation();
