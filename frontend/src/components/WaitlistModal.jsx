@@ -293,7 +293,7 @@ const WaitlistModal = ({ isOpen, onClose, product }) => {
               <div className="waitlist-note">
                 <p>No payment required today.</p>
                 <p>Your selected item(s) and size(s) are reserved for you.</p>
-                <p>We'll notify you as Feb 2 approaches to complete checkout.</p>
+                <p>We'll notify you as Feb 20 approaches to complete checkout.</p>
               </div>
             </form>
           </>
