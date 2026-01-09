@@ -156,7 +156,7 @@ const ProductCategories = () => {
             {shirts.map((shirt, index) => {
               const selectedSize = selectedSizes[shirt.id] || 'M';
               const isAdded = addedToCart[shirt.id];
-              const isMostPopular = index === 0; // Black/Cyan is first and most popular
+              const isMostPopular = shirt.mostPopular === true;
               const isBlackShirt = shirt.color === 'Black';
               
               return (
