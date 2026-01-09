@@ -14525,13 +14525,16 @@ a,
     gap: 32px;
   }
   
-  /* Section spacing - step up */
+  /* Section spacing - step up, backgrounds full-width */
   .features-section,
   .trust-section,
   .reviews-section,
-  .newsletter-section {
+  .newsletter-section,
+  .trust-bar {
     padding-top: 112px;
     padding-bottom: 112px;
+    width: 100%;
+    max-width: 100%;
   }
   
   /* Typography step-up */
