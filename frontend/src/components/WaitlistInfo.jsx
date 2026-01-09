@@ -16,7 +16,7 @@ const WaitlistInfo = ({ onJoinClick }) => {
         <div className="waitlist-info-card">
           <Calendar size={24} className="info-icon" />
           <div className="info-content">
-            <h4>Next Drop: Feb 2</h4>
+            <h4>Next Drop: Feb 20</h4>
             <p>First drop sold out in hours</p>
           </div>
         </div>
