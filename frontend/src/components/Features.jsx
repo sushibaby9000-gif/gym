@@ -27,8 +27,10 @@ const Features = () => {
                 <div className="feature-icon">
                   {Icon && <Icon size={36} strokeWidth={1.5} />}
                 </div>
-                <h3 className="feature-title">{feature.title}</h3>
-                <p className="feature-description">{feature.description}</p>
+                <div className="feature-content">
+                  <h3 className="feature-title">{feature.title}</h3>
+                  <p className="feature-description">{feature.description}</p>
+                </div>
               </div>
             );
           })}
