@@ -23,6 +23,19 @@ const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
+  // Check if all required fields are filled
+  const isFormValid = () => {
+    return (
+      formData.name.trim() !== '' &&
+      formData.email.trim() !== '' &&
+      formData.password.trim() !== '' &&
+      formData.confirmPassword.trim() !== '' &&
+      formData.gymnastics_type !== '' &&
+      formData.password.length >= 6 &&
+      formData.password === formData.confirmPassword
+    );
+  };
+
   // Redirect if already logged in
   useEffect(() => {
     if (isAuthenticated) {
