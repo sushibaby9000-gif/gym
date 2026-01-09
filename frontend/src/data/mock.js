@@ -45,7 +45,8 @@ export const shirts = [
     originalPrice: 65,
     sizes: ["XS", "S", "M", "L"],
     status: "available",
-    soldCount: 425
+    soldCount: 425,
+    mostPopular: true
   },
   {
     id: 2,
