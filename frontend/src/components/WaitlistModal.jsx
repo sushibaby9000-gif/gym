@@ -163,7 +163,7 @@ const WaitlistModal = ({ isOpen, onClose, product }) => {
             <div className="waitlist-modal-header">
               <div className="waitlist-badge">🔥 LIMITED DROP</div>
               <h2>Join the Waitlist</h2>
-              <p>First drop SOLD OUT. Secure your spot for Feb 2.</p>
+              <p>First drop SOLD OUT. Secure your spot for Feb 20.</p>
             </div>
 
             {spotsRemaining !== null && (
