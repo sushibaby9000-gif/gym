@@ -842,9 +842,20 @@
    =================================== */
 
 @media (min-width: 1728px) {
-  /* Ensure all main content is centered with max-width */
+  /* Sections should go full-width for backgrounds, only inner content constrained */
   main > section,
-  .main-content > section {
+  .main-content > section,
+  .landing-content > section,
+  .landing-content > div {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Inner containers get max-width for content centering */
+  main > section > .container,
+  .main-content > section > .container,
+  .landing-content > section > .container,
+  .landing-content > div > .container {
     max-width: var(--container-max);
     margin-left: auto;
     margin-right: auto;
