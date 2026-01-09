@@ -87,7 +87,7 @@ const CompleteProfile = () => {
           <form onSubmit={handleSubmit} className="complete-profile-form">
             <div className="form-field">
               <label htmlFor="gymnastics_type" className="form-label">
-                What type of gymnastics do you do?
+                Which discipline are you in?
               </label>
               <select
                 id="gymnastics_type"
