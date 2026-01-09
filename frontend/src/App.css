@@ -14401,10 +14401,10 @@ a,
     gap: 24px;
   }
   
-  /* Features grid: 3 columns */
+  /* Features grid: 2 columns horizontal */
   .features-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
   
   /* Section spacing - step up, backgrounds full-width */
