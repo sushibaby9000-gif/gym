@@ -1579,7 +1579,17 @@ body {
 
 @media (max-width: 768px) {
   .features-section {
-    padding: 60px 20px;
+    padding: 60px 16px;
+  }
+  
+  .features-section .container {
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  .features-section .section-header {
+    padding: 0;
+    margin-bottom: 40px;
   }
 }
 
