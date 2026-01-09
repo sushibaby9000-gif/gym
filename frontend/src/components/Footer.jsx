@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 import { socialLinks } from '../data/mock';
-import { PaymentMethods } from './TrustBadges';
 
 // Custom social icons
 const InstagramIcon = ({ size = 18 }) => (
@@ -33,32 +31,24 @@ const YouTubeIcon = ({ size = 18 }) => (
 );
 
 const Footer = () => {
-  const { t } = useTranslation();
-  
-  // Use window.open to bypass iframe restrictions in preview environment
-  const openSocialLink = (url, e) => {
-    e.preventDefault();
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
   return (
     <footer className="footer">
       <div className="footer-content">
         {/* Brand */}
         <div className="footer-brand">
           <h3 className="footer-logo">RAZE</h3>
-          <p className="footer-tagline">{t('footer.builtByDiscipline')}</p>
+          <p className="footer-tagline">Built by Discipline</p>
           <div className="social-links">
-            <a href={socialLinks.instagram} aria-label="Instagram" onClick={(e) => openSocialLink(socialLinks.instagram, e)}>
+            <a href={socialLinks.instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <InstagramIcon size={20} />
             </a>
-            <a href={socialLinks.tiktok} aria-label="TikTok" onClick={(e) => openSocialLink(socialLinks.tiktok, e)}>
+            <a href={socialLinks.tiktok} aria-label="TikTok" target="_blank" rel="noopener noreferrer">
               <TikTokIcon size={20} />
             </a>
-            <a href={socialLinks.twitter} aria-label="X / Twitter" onClick={(e) => openSocialLink(socialLinks.twitter, e)}>
+            <a href={socialLinks.twitter} aria-label="X / Twitter" target="_blank" rel="noopener noreferrer">
               <XIcon size={20} />
             </a>
-            <a href={socialLinks.youtube} aria-label="YouTube" onClick={(e) => openSocialLink(socialLinks.youtube, e)}>
+            <a href={socialLinks.youtube} aria-label="YouTube" target="_blank" rel="noopener noreferrer">
               <YouTubeIcon size={20} />
             </a>
             <a href={`mailto:${socialLinks.email}`} aria-label="Email">
@@ -69,39 +59,36 @@ const Footer = () => {
 
         {/* Shop Column */}
         <div className="footer-section">
-          <h4 className="footer-heading">{t('footer.shop')}</h4>
+          <h4 className="footer-heading">Shop</h4>
           <ul className="footer-list">
-            <li><Link to="/products">{t('footer.allProducts')}</Link></li>
-            <li><Link to="/size-guide">{t('footer.sizeGuide')}</Link></li>
-            <li><Link to="/returns">{t('footer.shippingReturns')}</Link></li>
+            <li><Link to="/products">All Products</Link></li>
+            <li><Link to="/size-guide">Size Guide</Link></li>
+            <li><Link to="/returns">Shipping & Returns</Link></li>
           </ul>
         </div>
 
         {/* Company Column */}
         <div className="footer-section">
-          <h4 className="footer-heading">{t('footer.company')}</h4>
+          <h4 className="footer-heading">Company</h4>
           <ul className="footer-list">
-            <li><Link to="/about">{t('footer.about')}</Link></li>
-            <li><Link to="/faq">{t('footer.faq')}</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/faq">FAQ</Link></li>
           </ul>
         </div>
 
         {/* Support Column */}
         <div className="footer-section">
-          <h4 className="footer-heading">{t('footer.support')}</h4>
+          <h4 className="footer-heading">Support</h4>
           <ul className="footer-list">
-            <li><Link to="/track">{t('footer.trackOrder')}</Link></li>
-            <li><a href="mailto:support@razetraining.com">{t('footer.contact')}</a></li>
+            <li><Link to="/track">Track Order</Link></li>
+            <li><a href="mailto:support@razetraining.com">Contact</a></li>
           </ul>
         </div>
       </div>
 
-      {/* Payment Methods */}
-      <PaymentMethods />
-
       <div className="footer-bottom">
         <p className="footer-copyright">
-          {t('footer.copyright', { year: new Date().getFullYear() })}
+          © {new Date().getFullYear()} RAZE. All rights reserved.
         </p>
       </div>
     </footer>

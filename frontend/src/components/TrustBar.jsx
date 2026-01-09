@@ -1,28 +1,25 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { Truck, Shield, Award, CheckCircle } from 'lucide-react';
 
 const TrustBar = () => {
-  const { t } = useTranslation();
-  
   return (
     <div className="trust-bar">
       <div className="trust-bar-content">
         <div className="trust-item">
           <Truck size={20} />
-          <span>{t('trustBar.freeShipping')}</span>
+          <span>Free Shipping $100+ USD</span>
         </div>
         <div className="trust-item">
           <CheckCircle size={20} />
-          <span>{t('trustBar.easyReturns')}</span>
+          <span>100% Satisfaction Guarantee</span>
         </div>
         <div className="trust-item">
           <Shield size={20} />
-          <span>{t('trustBar.securePayment')}</span>
+          <span>Secure Checkout</span>
         </div>
         <div className="trust-item">
           <Award size={20} />
-          <span>{t('trustBar.support')}</span>
+          <span>Premium Quality</span>
         </div>
       </div>
     </div>

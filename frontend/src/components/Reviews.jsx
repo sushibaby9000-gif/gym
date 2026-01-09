@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { Star } from 'lucide-react';
 
 const reviews = [
@@ -62,14 +61,13 @@ const reviews = [
 ];
 
 const Reviews = () => {
-  const { t } = useTranslation();
   // Double the reviews for seamless infinite scroll
   const doubledReviews = [...reviews, ...reviews];
 
   return (
     <section className="reviews-section" id="reviews">
       <div className="reviews-header">
-        <h2 className="reviews-title">{t('reviews.title')}</h2>
+        <h2 className="reviews-title">What Athletes Say</h2>
         <div className="reviews-rating">
           <div className="stars-row">
             {[...Array(5)].map((_, i) => (

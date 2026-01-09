@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { features } from '../data/mock';
 import { Activity, Minimize2, Target, Crosshair } from 'lucide-react';
 
@@ -11,15 +10,13 @@ const iconMap = {
 };
 
 const Features = () => {
-  const { t } = useTranslation();
-  
   return (
     <section className="features-section" id="features">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">{t('nav.whyRaze')}</h2>
-          <p className="section-subtitle">{t('features.performanceDesc')}</p>
-          <p className="section-subtitle-secondary">{t('features.qualityDesc')}</p>
+          <h2 className="section-title">Why RAZE</h2>
+          <p className="section-subtitle">Designed with purpose by gymnasts. Built for performance.</p>
+          <p className="section-subtitle-secondary">Tested in real training environments.</p>
         </div>
 
         <div className="features-grid">
@@ -37,7 +34,7 @@ const Features = () => {
           })}
         </div>
         
-        <p className="features-tagline">{t('features.designDesc')}</p>
+        <p className="features-tagline">Built for training. Refined for everyday wear.</p>
       </div>
     </section>
   );
