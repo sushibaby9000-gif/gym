@@ -9,8 +9,8 @@ const WaitlistBanner = ({ onClick }) => {
   const [isVisible, setIsVisible] = useState(false); // Hidden until first interaction
   const bannerRef = useRef(null);
 
-  // Next drop date - February 2, 2026
-  const targetDate = new Date('2026-02-02T00:00:00');
+  // Next drop date - February 20, 2026
+  const targetDate = new Date('2026-02-20T00:00:00');
 
   // Show banner after first click, scroll, or touch
   useEffect(() => {
