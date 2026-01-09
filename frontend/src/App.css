@@ -14604,13 +14604,16 @@ a,
     gap: 40px;
   }
   
-  /* Section spacing - max out */
+  /* Section spacing - max out, backgrounds full-width */
   .features-section,
   .trust-section,
   .reviews-section,
-  .newsletter-section {
+  .newsletter-section,
+  .trust-bar {
     padding-top: 128px;
     padding-bottom: 128px;
+    width: 100%;
+    max-width: 100%;
   }
   
   /* Typography - CAP at maximum comfortable size */
