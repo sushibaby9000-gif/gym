@@ -15120,3 +15120,61 @@ img.hero-shirt-single:not([style*="opacity: 0"]) {
   opacity: 1;
 }
 
+
+
+/* Glowing button effect when form is ready to submit */
+.btn-glow {
+  position: relative;
+  animation: button-glow 2s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4), 
+              0 0 40px rgba(0, 212, 255, 0.2),
+              0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.6), 
+              0 0 50px rgba(0, 212, 255, 0.3),
+              0 6px 16px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+@keyframes button-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4), 
+                0 0 40px rgba(0, 212, 255, 0.2),
+                0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.6), 
+                0 0 60px rgba(0, 212, 255, 0.3),
+                0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Pulse effect for extra attention */
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00D4FF, #0099CC, #00D4FF);
+  border-radius: 6px;
+  opacity: 0;
+  z-index: -1;
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.05);
+  }
+}
+
