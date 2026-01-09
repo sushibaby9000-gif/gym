@@ -14258,14 +14258,15 @@ body {
     padding: 16px !important;
   }
   
-  /* Features: 2x2 with more breathing room */
+  /* Features: single column, centered */
   .features-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 20px !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
   
   .feature-card {
-    padding: 20px !important;
+    padding: 18px !important;
+    width: 100% !important;
   }
 }
 
