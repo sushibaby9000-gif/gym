@@ -1606,6 +1606,14 @@ body {
   .features-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .feature-card {
+    width: 100%;
+    padding: 20px;
+    gap: 16px;
   }
 }
 
