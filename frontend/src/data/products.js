@@ -99,8 +99,8 @@ export const products = [
     color: 'Black',
     logo: 'Cyan',
     images: [
-      '/images/products/c4dg91vy_5.webp',
-      '/images/products/0zp1wq7a_1.webp'
+      'https://customer-assets.emergentagent.com/job_gym-recovery-1/artifacts/xt57pgfh_short%20blue.png',
+      'https://customer-assets.emergentagent.com/job_gym-recovery-1/artifacts/lwfr97sg_short%20back.png'
     ],
     mensSizes: ['S', 'M', 'L', 'XL'],
     womensSizes: ['XS', 'S', 'M', 'L'],
