@@ -14168,14 +14168,15 @@ body {
     min-height: 160px !important;
   }
   
-  /* Features: 2x2 grid */
+  /* Features: single column, full width, centered */
   .features-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: 1fr !important;
     gap: 12px !important;
   }
   
   .feature-card {
-    padding: 14px !important;
+    padding: 16px !important;
+    width: 100% !important;
   }
   
   /* Trust badges: 2 columns */
