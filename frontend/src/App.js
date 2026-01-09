@@ -73,7 +73,6 @@ const Home = () => {
         <AnnouncementBar />
         <Features />
         <Reviews />
-        <PaymentMethods />
         <Newsletter onJoinClick={handleEarlyAccessClick} />
       </main>
       <Footer />
