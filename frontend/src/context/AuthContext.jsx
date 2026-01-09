@@ -68,28 +68,38 @@ export const AuthProvider = ({ children }) => {
   };
 
   const register = async (email, password, name, additionalInfo = {}) => {
-    const response = await fetch(`${API_URL}/api/auth/register`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      body: JSON.stringify({ 
-        email, 
-        password, 
-        name,
-        gymnastics_type: additionalInfo.gymnastics_type,
-        gender: additionalInfo.gender,
-        age: additionalInfo.age
-      })
-    });
-
-    const data = await response.json();
+    console.log('🔍 Register called with:', { email, name, API_URL });
     
-    if (!response.ok) {
-      throw new Error(data.detail || 'Registration failed');
-    }
+    try {
+      const response = await fetch(`${API_URL}/api/auth/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ 
+          email, 
+          password, 
+          name,
+          gymnastics_type: additionalInfo.gymnastics_type,
+          gender: additionalInfo.gender,
+          age: additionalInfo.age
+        })
+      });
 
-    setUser(data.user);
-    return data.user;
+      console.log('🔍 Register response status:', response.status);
+
+      const data = await response.json();
+      console.log('🔍 Register response data:', data);
+      
+      if (!response.ok) {
+        throw new Error(data.detail || 'Registration failed');
+      }
+
+      setUser(data.user);
+      return data.user;
+    } catch (error) {
+      console.error('❌ Register error:', error);
+      throw error;
+    }
   };
 
   const loginWithGoogle = () => {
