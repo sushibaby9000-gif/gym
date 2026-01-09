@@ -17,6 +17,7 @@ import EmailPopup from "./components/EmailPopup";
 import GiveawayPopup from "./components/GiveawayPopup";
 import AnnouncementBar from "./components/AnnouncementBar";
 import ScrollToTop from "./components/ScrollToTop";
+import { PaymentMethods } from "./components/TrustBadges";
 import { Toaster } from "./components/ui/sonner";
 import AdminRoute from "./components/AdminRoute";
 import LiveVisitorCounter from "./components/LiveVisitorCounter";
