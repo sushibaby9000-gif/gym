@@ -108,6 +108,7 @@ export const products = [
     inStock: true,
     stock: { XS: 6, S: 10, M: 14, L: 18, XL: 12 },
     featured: true,
+    mostPopular: true,
     soldCount: 357
   },
   {
