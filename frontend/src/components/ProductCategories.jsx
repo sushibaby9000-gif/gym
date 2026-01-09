@@ -245,16 +245,24 @@ const ProductCategories = () => {
           <p className="row-subtitle">Designed for full-range movement — built to match Performance T-Shirts</p>
           
           <div className="product-grid shorts-grid">
-            {shorts.map((short) => {
+            {shorts.map((short, index) => {
               const gender = selectedGender[short.id] || 'mens';
               const sizes = gender === 'mens' ? short.mensSizes : short.womensSizes;
               const selectedSize = selectedSizes[short.id] || (gender === 'mens' ? 'M' : 'S');
               const isAdded = addedToCart[short.id];
               const isComingSoon = short.status === 'coming_soon';
               const isBlackShort = short.color === 'Black';
+              const isMostPopular = short.mostPopular === true;
               
               return (
-                <div key={short.id} className={`product-card ${isComingSoon ? 'coming-soon' : ''} ${isBlackShort ? 'black-product' : ''}`}>
+                <div key={short.id} className={`product-card ${isComingSoon ? 'coming-soon' : ''} ${isBlackShort ? 'black-product' : ''} ${isMostPopular ? 'most-popular' : ''}`}>
+                  {/* Most Popular badge for top-selling shorts */}
+                  {isMostPopular && !isComingSoon && (
+                    <div className="popular-badge">
+                      <Star size={12} fill="currentColor" /> Most Popular
+                    </div>
+                  )}
+                  
                   {/* Wishlist heart button - only for available products */}
                   {!isComingSoon && (
                     <button 
