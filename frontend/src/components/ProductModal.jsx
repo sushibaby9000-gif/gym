@@ -204,7 +204,7 @@ const ProductModal = ({ isOpen, onClose, product }) => {
 
               {/* Sold out notice */}
               <div className="modal-bundle-nudge">
-                First drop <strong>SOLD OUT</strong> — Secure your spot for Feb 2
+                First drop <strong>SOLD OUT</strong> — Secure your spot for Feb 20
               </div>
 
               {/* Product features */}
