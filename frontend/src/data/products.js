@@ -99,7 +99,7 @@ export const products = [
     color: 'Black',
     logo: 'Cyan',
     images: [
-      'https://customer-assets.emergentagent.com/job_gym-recovery-1/artifacts/mk5hllnk_short%20gray.png',
+      'https://customer-assets.emergentagent.com/job_gym-recovery-1/artifacts/xt57pgfh_short%20blue.png',
       'https://customer-assets.emergentagent.com/job_gym-recovery-1/artifacts/lwfr97sg_short%20back.png'
     ],
     mensSizes: ['S', 'M', 'L', 'XL'],
@@ -122,7 +122,7 @@ export const products = [
     color: 'Black',
     logo: 'Silver',
     images: [
-      'https://customer-assets.emergentagent.com/job_gym-recovery-1/artifacts/xt57pgfh_short%20blue.png',
+      'https://customer-assets.emergentagent.com/job_gym-recovery-1/artifacts/mk5hllnk_short%20gray.png',
       'https://customer-assets.emergentagent.com/job_gym-recovery-1/artifacts/lwfr97sg_short%20back.png'
     ],
     mensSizes: ['S', 'M', 'L', 'XL'],
